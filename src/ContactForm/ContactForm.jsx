@@ -11,8 +11,6 @@ const userSchema = Yup.object().shape({
 export const ContactForm = ({ onAdd }) => {
   const nameId = useId();
   const numberId = useId();
-  const nameFielId = useId();
-  const nameNumberId = useId();
 
   return (
     <Formik
@@ -29,14 +27,14 @@ export const ContactForm = ({ onAdd }) => {
     >
       <Form className={css.form} autoComplete="off">
         <div className={css.formGroup}>
-          <label className={css.label} htmlFor={nameFielId}>
+          <label className={css.label} htmlFor={nameId}>
             Name:
           </label>
           <Field className={css.input} type="text" name="name" id={nameId} />
           <ErrorMessage className={css.error} name="name" component="span" />
         </div>
         <div className={css.formGroup}>
-          <label className={css.label} htmlFor={nameNumberId}>
+          <label className={css.label} htmlFor={numberId}>
             Number:
           </label>
           <Field className={css.input} type="text" name="number" id={numberId} />
